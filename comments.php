@@ -43,21 +43,38 @@
 				<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 
 			<?php do_action( 'comment_form', $post->ID ); comment_id_fields(); ?>
+
 			</form>
-		<?php endif; // If registration required and not logged in ?>
+
+		<?php endif; ?>
+
 	</div>
 	<ul class="comment-list">
 		<?php foreach (get_comments() as $comment): ?>
+
 			<li id="comment-<?php echo $comment->comment_ID; ?>" class="comment">
 				<p class="comment-author">
-					<?php echo $comment->comment_author; ?>
+					<a href="<?php echo 
+								empty($comment->comment_author_url) ? '#' : $comment->comment_author_url; 
+							?>">
+
+						<?php echo $comment->comment_author; ?>
+
+					</a>
 					<i class="sepa">give comment on</i>
+
 					<?php echo $comment->comment_date; ?>
+
 				</p>
 				<p class="comment-content">
+
 					<?php echo $comment->comment_content; ?>
+
 				</p>
 			</li>
+
 		<?php endforeach; ?>
+
 	</ul>
-<?php endif; // If comments are open: delete this and the sky will fall on your head ?>
+
+<?php endif; ?>

@@ -15,6 +15,7 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/font-awesome.min.css" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
         <?php wp_head(); ?>
     </head>

@@ -12,15 +12,20 @@
             <div id="footer">
                 <div class="small-wrapper">
                     <ul class="widget-list">
+
                         <?php 
                             if( is_active_sidebar('footer') ){
                                 dynamic_sidebar('footer');
                             }
                         ?>
+                        
                     </ul>
                     <div class="bar">
                         <p class="copy">
-                            Handcrafted by <a href="https://github.com/armenthiz">@armenthiz</a>
+                            Handcrafted by 
+                            <a href="https://github.com/armenthiz">
+                                @armenthiz
+                            </a>
                         </p>
                         <ul class="social">
                             <li>
@@ -40,12 +45,15 @@
                             </li>
                         </ul>
                         <p class="wordpress">
-                            <?php printf( __( 'Proudly powered by %s', 'patio' ), 'WordPress' ); ?>
+                            Proudly powered by 
+                            <a href="https://wordpress.org">Wordpress</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+
         <?php wp_footer(); ?>
+
     </body>
 </html>
