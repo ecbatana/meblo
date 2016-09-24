@@ -8,11 +8,12 @@
                                     at <i><?php the_date(); ?> @ <?php the_time(); ?></i>
                                 </p>
                                 <?php the_content(); ?>
+                                <ul class="widget-list">
+                                    <?php 
+                                        if( is_active_sidebar('bottom-post') ){
+                                            dynamic_sidebar('bottom-post');
+                                        }
+                                    ?>
+                                </ul>
+                                <?php comments_template(); ?>
                             </li>
-                            <ul>
-                                <?php 
-                                    if( is_active_sidebar('bottom-post') ){
-                                        dynamic_sidebar('bottom-post');
-                                    }
-                                ?>
-                            </ul>
