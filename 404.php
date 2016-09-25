@@ -1,8 +1,7 @@
 <?php
 /**
  * The 404 not found template file.
- *
- * @package Patio
+ * @package meblo
  */
 get_header(); ?>
 
