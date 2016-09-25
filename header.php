@@ -1,9 +1,6 @@
 <?php
 /**
- * Display the main header of this theme
- *
- * including header navigation and welcome text, till the #content section
- *
+ * The header template file
  * @package meblo
  */
 ?><!DOCTYPE html>
@@ -31,11 +28,28 @@
                                 </a>
                             </h1>
                         </div>
+                        <a href="#" class="search-toggler">
+                            <i class="fa fa-search fa-fw"></i>
+                        </a>
                         <?php
                             $args = array(
                                 'container' => '',
                                 'menu_class' => 'menus',
                                 'link_after' => '<hr />',
+                            );
+                        
+                            wp_nav_menu( $args );
+                        ?>
+                        <a href="#" class="responsive-toggler">
+                            <i class="fa fa-bars fa-fw"></i>
+                        </a>
+                        <div class="search-box">
+                            <?php get_search_form(); ?>
+                        </div>
+                        <?php
+                            $args = array(
+                                'container' => '',
+                                'menu_class' => 'responsive-menus',
                             );
                         
                             wp_nav_menu( $args );

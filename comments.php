@@ -1,4 +1,10 @@
-<?php if ( 'open' == $post->comment_status ) : ?>
+<?php 
+/**
+ * The comments template file.
+ * @package meblo
+ */
+
+if ( 'open' == $post->comment_status ) : ?>
 
 	<div class="comment-box respond">
 		<h3 class="title"><?php comment_form_title(); ?></h3>
@@ -51,7 +57,7 @@
 	</div>
 	<ul class="comment-list">
 		<?php foreach (get_comments() as $comment): ?>
-
+			<?php if ($comment->comment_post_ID == get_the_id()): ?>
 			<li id="comment-<?php echo $comment->comment_ID; ?>" class="comment">
 				<p class="comment-author">
 					<a href="<?php echo 
@@ -72,7 +78,8 @@
 
 				</p>
 			</li>
-
+		
+			<?php endif; ?>
 		<?php endforeach; ?>
 
 	</ul>

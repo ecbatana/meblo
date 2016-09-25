@@ -1,9 +1,6 @@
 <?php
 /**
- * Display the main footer of this theme
- *
- * including header navigation and welcome text, till the #content section
- *
+ * The footer template file
  * @package meblo
  */
 ?>
@@ -39,7 +36,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://github.com/armenthiz">
                                     <i class="fa fa-github"></i>
                                 </a>
                             </li>
@@ -55,5 +52,7 @@
 
         <?php wp_footer(); ?>
 
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
     </body>
 </html>

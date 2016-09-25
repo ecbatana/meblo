@@ -1,7 +1,6 @@
 <?php
 /**
  * Meblo theme functions
- *
  * @package  meblo
  */
 
@@ -109,9 +108,6 @@ function meblo_first_post_image() {
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
     $first_img = $matches [1] [0];
 
-    if(empty($first_img)){
-        $first_img = bloginfo('template_url') . '/img/no-image.png';
-    }
     return $first_img;
 }
 
@@ -137,7 +133,7 @@ function meblo_first_post_image_alt() {
  * meblo_post_nav
  * used to get the custom post navigation.
  */
-function meblo_post_nav($nav) {
+function meblo_post_nav() {
     $separator = '<p class="post-separator"></p>';
     $prev = '<p class="post-prev"><i class="fa fa-long-arrow-left"></i>&nbsp;Previous page</p>';
     $next = '<p class="post-next">Next page&nbsp;<i class="fa fa-long-arrow-right"></i></p>';
